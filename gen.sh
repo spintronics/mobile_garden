@@ -1,0 +1,1 @@
+npx @openapitools/openapi-generator-cli generate -i api_v1.yaml -g go-gin-server -o server_stub

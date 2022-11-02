@@ -1,0 +1,81 @@
+openapi: 3.1.0
+x-stoplight:
+  id: nnacza4i4uacp
+info:
+  title: mobile_garden_api_v1
+  version: '1.0'
+servers:
+  - url: 'http://localhost:3000'
+paths:
+  /soilReadings:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                x-examples:
+                  Example 1:
+                    - {}
+                items:
+                  $ref: '#/components/schemas/SoilReading'
+      operationId: get-soilReadings
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: startDate
+        - schema:
+            type: string
+          in: query
+          name: endDate
+    post:
+      summary: ''
+      operationId: post-soilReading
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SoilReading'
+    parameters: []
+  /photos:
+    post:
+      summary: ''
+      operationId: post-file
+      responses:
+        '200':
+          description: OK
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties: {}
+        description: ''
+      parameters:
+        - schema:
+            type: string
+          in: query
+          name: fileName
+          description: name of the file
+    parameters: []
+components:
+  schemas:
+    SoilReading:
+      title: SoilReading
+      x-stoplight:
+        id: fgq2znwp693rs
+      type: object
+      properties:
+        id:
+          type: string
+        moisture:
+          type: number
+        date:
+          type: string
