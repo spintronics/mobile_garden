@@ -65,6 +65,13 @@ var routes = Routes{
 	},
 
 	{
+		"GetPhotos",
+		http.MethodGet,
+		"/photos",
+		GetPhotos,
+	},
+
+	{
 		"GetSoilReadings",
 		http.MethodGet,
 		"/soilReadings",

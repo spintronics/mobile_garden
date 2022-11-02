@@ -10,10 +10,9 @@
 package openapi
 
 type SoilReading struct {
+	Id string `json:"id,omitempty"`
 
-	Id *interface{} `json:"id,omitempty"`
+	Moisture float64 `json:"moisture,omitempty"`
 
-	Moisture *interface{} `json:"moisture,omitempty"`
-
-	Date *interface{} `json:"date,omitempty"`
+	Date string `json:"date,omitempty"`
 }

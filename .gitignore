@@ -1,3 +1,6 @@
 **/*.env
 server_stub
 .vscode
+**/api_stub
+server/__debug_bin.exe
+control_hub/api

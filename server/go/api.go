@@ -93,7 +93,6 @@ func PostFile(c *gin.Context) {
 		return
 	}
 
-
 	name := header.Filename
 
 	queryName := c.Query("fileName")
@@ -137,10 +136,15 @@ func PostFile(c *gin.Context) {
 		return
 	}
 
-	c.String(http.StatusOK, "https://mobile-garden.s3.amazonaws.com/"+name)
+	c.JSON(http.StatusOK, gin.H{})
 }
 
 // PostSoilReading -
 func PostSoilReading(c *gin.Context) {
+	c.JSON(http.StatusOK, gin.H{})
+}
+
+// GetPhotos -
+func GetPhotos(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{})
 }
